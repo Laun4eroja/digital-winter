@@ -18,9 +18,10 @@ html {
 
 :root {
     /* Новогодняя палитра */
-    --main: #800020;
+    --main: #324782;
     --text: #2A2521;
-    --accent: #004B23;
+    --accent: #D4AF37;
+    --company-color: #00A6EB;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
     font-weight: 400;
     line-height: 1.2;
     /* светлый праздничный фон: красное и зелёное свечение по краям */
-    background: linear-gradient(90deg, rgba(128, 0, 32, .10) 0%, rgba(255, 255, 255, 1) 45%, rgba(0, 75, 35, .10) 100%);
+    background: linear-gradient(90deg, rgba(212, 175, 55, .10) 0%, rgba(255, 255, 255, 1) 45%, rgba(0, 75, 35, .10) 100%);
 }
 
 a {
@@ -302,7 +303,7 @@ main .popup {
 .header__logo {
     position: relative;
     margin-bottom: 40px;
-    max-width: 300px;
+    max-width: 330px;
 }
 
 .header__logo img {
@@ -311,19 +312,6 @@ main .popup {
 
 .header__logo-white {
     display: none;
-}
-
-.header__logo::after {
-    position: absolute;
-    z-index: 20;
-    content: '';
-    top: -20px;
-    right: -60%;
-    width: 150px;
-    height: 90px;
-    background-image: url(./../images/header/1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .header__title {
@@ -365,7 +353,7 @@ main .popup {
     z-index: 10;
     bottom: 0;
     left: 0;
-    transform: translateY(30%);
+    transform: translateY(50%);
 }
 
 .header__sheet-2 {
@@ -401,7 +389,8 @@ main .popup {
 .snow__flake {
     position: absolute;
     top: -10px;
-    color: var(--main);
+    color: var(--company-color);
+    opacity: .4;
     user-select: none;
     animation: snowfall linear infinite;
     will-change: transform;
@@ -446,8 +435,8 @@ main .popup {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(128, 0, 32, .35);
-    border-radius: 25px;
+    border: 1px solid rgba(1, 12, 44, .4);
+    border-radius: 40px;
     width: 230px;
     background-color: rgba(255, 255, 255, .5);
     padding: 10px;
@@ -466,7 +455,7 @@ main .popup {
 
 .categories__list-item.active {
     border-color: var(--main);
-    background-color: rgba(128, 0, 32, 0.85);
+    background-color: var(--main);
     backdrop-filter: blur(4px);
     color: #FFF8F0;
 }
@@ -526,7 +515,7 @@ main .popup {
     font-weight: 700;
     color: #fff;
     text-align: left;
-    background-color: rgba(128, 0, 32, 0.55);
+    background-color: rgba(5, 27, 94, 0.5);
     backdrop-filter: blur(4px);
     padding: 10px 15px;
     border-radius: 20px;
@@ -548,8 +537,7 @@ main .popup {
     color: #fff;
     width: 230px;
     text-align: center;
-    /* background: rgba(99, 151, 173, 0.6); */
-    background-color: rgba(0, 75, 35, 0.6);
+    background-color: rgba(5, 27, 94, 0.5);
     backdrop-filter: blur(4px);
     border-radius: 20px;
     padding: 10px 0;
@@ -651,7 +639,7 @@ main .popup {
     width: 54px;
     height: 54px;
     border-radius: 16px;
-    background-color: rgba(0, 75, 35, 0.85);
+      background-color: rgba(5, 27, 94, 0.8);
     backdrop-filter: blur(4px);
     color: #fff;
     display: flex;
@@ -719,14 +707,14 @@ main .popup {
 }
 
 .concierge__img::before {
-    position: absolute;
+position: absolute;
     z-index: 20;
     content: '';
     width: 450px;
     height: 120%;
     top: -5%;
     left: -5%;
-    background: linear-gradient(90deg, rgba(0, 75, 35, .45) 0%, rgba(255, 255, 255, .4) 100%);
+    background: linear-gradient(90deg, rgba(50, 71, 130, .5) 0%, rgba(255, 255, 255, .4) 100%);
     border-radius: 20px;
 }
 
@@ -818,7 +806,7 @@ main .popup {
 }
 
 .concierge__reg-icon {
-    background-color: rgba(128, 0, 32, 0.85);
+    background-color: rgba(5, 27, 94, 0.8);
     backdrop-filter: blur(4px);
     border-radius: 50%;
     padding: 10px;
@@ -885,7 +873,7 @@ main .popup {
     display: inline-block;
     border-radius: 50px;
     transition: all .1s ease-in;
-    background-color: rgba(128, 0, 32, 0.85);
+    background-color: var(--main);
     backdrop-filter: blur(4px);
     /* font-size: 16px; */
     font-size: clamp(14px, 1vw, 16px);
@@ -908,9 +896,9 @@ main .popup {
     justify-content: space-between;
     max-width: 400px;
     padding: 25px;
-    border: 1px solid rgba(128, 0, 32, .22);
+    border: 1px solid rgba(255, 255, 255, .35);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .08);
 
     box-shadow: 0 10px 15px rgba(0, 0, 0, .25);
     transform: translateY(-2px);
@@ -986,7 +974,7 @@ main .popup {
 .accordeon__item {
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, .65);
-    border: 1px solid rgba(128, 0, 32, .18);
+    border: 1px solid rgba(212, 175, 55, .18);
     border-radius: 22px;
     box-shadow: 0 8px 24px rgba(42, 37, 33, .12);
     overflow: hidden;
@@ -999,8 +987,8 @@ main .popup {
 }
 
 .accordeon__item:has(.accordeon__item-title--active) {
-    border-color: rgba(128, 0, 32, .45);
-    box-shadow: 0 14px 34px rgba(128, 0, 32, .16);
+    border-color: rgba(212, 175, 55, .45);
+    box-shadow: 0 14px 34px rgba(212, 175, 55, .16);
 }
 
 button.accordeon__item-title {
@@ -1106,7 +1094,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
 .footer {
     padding: 40px 0;
-    background-color: #316b4c;
+    background-color: var(--main);
     color: #FFF8F0;
     font-size: clamp(14px, 1vw, 16px);
 }
@@ -1395,7 +1383,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         content: "";
         position: absolute;
         inset: 0;
-        background-color: rgba(204, 178, 123, 0.2); 
+        background-color: rgba(204, 178, 123, 0.2);
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(5px);
         z-index: 1;
@@ -1566,10 +1554,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .menu {
         margin-bottom: 60px;
-    }
-
-    .header__logo::after {
-        display: none;
     }
 
     .footer__wrapper {
