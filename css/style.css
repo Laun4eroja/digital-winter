@@ -283,6 +283,8 @@ main .popup {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    position: relative;
+    z-index: 100;
 }
 
 .menu {
@@ -305,6 +307,10 @@ main .popup {
 
 .header__logo img {
     width: 100%;
+}
+
+.header__logo-white {
+    display: none;
 }
 
 .header__logo::after {
@@ -950,7 +956,6 @@ main .popup {
 }
 
 
-
 /* faq */
 
 .faq__title {
@@ -1380,6 +1385,22 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 }
 
 @media (max-width: 720px) {
+
+    .header__subtitle,
+    .menu {
+        color: #fff;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(204, 178, 123, 0.2); 
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 1;
+    }
+
     .concierge__wrapper {
         flex-direction: column;
     }
@@ -1500,6 +1521,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
     .reviews__card-text {
         font-size: 16px;
     }
+
 }
 
 @media (max-width: 640px) {
@@ -1525,6 +1547,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
     }
 
     .header__wrapper {
+        justify-content: center;
         text-align: center;
     }
 
@@ -1533,15 +1556,20 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         margin-right: auto;
     }
 
+    .header__logo-black {
+        display: none;
+    }
+
+    .header__logo-white {
+        display: block;
+    }
+
     .menu {
         margin-bottom: 60px;
     }
 
     .header__logo::after {
-        top: -10px;
-        right: -30%;
-        width: 75px;
-        height: 70px;
+        display: none;
     }
 
     .footer__wrapper {
@@ -1567,8 +1595,8 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .categories__list-item {
         max-width: 140px;
-        font-size: 14px;
-        padding: 13px 0;
+        font-size: 12px;
+        padding: 10px 4px;
     }
 
     .categories__card-disc__tutu {
@@ -1770,7 +1798,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         padding: 20px;
     }
 
-    .header__logo::after,
     .header__sheet-1 {
         display: none;
     }

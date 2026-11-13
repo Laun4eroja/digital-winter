@@ -153,7 +153,7 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-
+// снег -->
 
 const flakes = document.querySelectorAll('.snow__flake');
 
@@ -168,3 +168,7 @@ flakes.forEach((flake, index) => {
   flake.style.animationDuration = `${duration}s`;
   flake.style.animationDelay = `${delay}s`;
 });
+
+// <-- снег
+
+
