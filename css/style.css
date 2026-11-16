@@ -639,7 +639,7 @@ main .popup {
     width: 54px;
     height: 54px;
     border-radius: 16px;
-      background-color: rgba(5, 27, 94, 0.8);
+    background-color: rgba(5, 27, 94, 0.8);
     backdrop-filter: blur(4px);
     color: #fff;
     display: flex;
@@ -707,7 +707,7 @@ main .popup {
 }
 
 .concierge__img::before {
-position: absolute;
+    position: absolute;
     z-index: 20;
     content: '';
     width: 450px;
@@ -851,15 +851,47 @@ position: absolute;
     gap: 30px;
 }
 
-.reviews__left {
+.reviews__block {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0 0 30px;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+.reviews__left {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.reviews__left span {
+    color: var(--main);
+    font-weight: 600;
+}
+
 
 .reviews__title {
     align-self: start;
     max-width: 370px;
+    font-weight: 700;
+}
+
+.reviews__img {
+    max-width: 500px;
+    line-height: 0.1;
+}
+
+.reviews__img img {
+    width: 100%;
 }
 
 .reviews__cta-text {
@@ -934,13 +966,6 @@ position: absolute;
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
-}
-
-.swiper {
-    padding: 30px 10px !important;
-    width: 1400px;
-    height: 400px;
-    border-radius: 15px;
 }
 
 
@@ -1139,9 +1164,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
 
 @media (max-width: 1470px) {
-    .swiper {
-        width: 100%;
-    }
 
     .reviews__card {
         height: 275px;
@@ -1157,9 +1179,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         margin-top: -60px;
     }
 
-    .swiper {
-        height: 420px;
-    }
 
     .reviews__card {
         height: 300px;
@@ -1217,10 +1236,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
     .categories__card-name.categories__card-name__mini {
         font-size: 12px;
         padding: 10px 0;
-    }
-
-    .swiper {
-        height: 330px;
     }
 
     .reviews__card {
@@ -1301,8 +1316,21 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         height: 400px;
     }
 
+    .reviews__block {
+        padding-left: 20px;
+    }
+
     .reviews__card-text {
         font-size: 15px;
+    }
+
+    .reviews__left {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .reviews__img {
+        max-width: 320px;
     }
 }
 
@@ -1357,10 +1385,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .app__btns a:hover {
         transform: translateY(0px);
-    }
-
-    .swiper {
-        height: 360px;
     }
 
     .reviews__card {
@@ -1497,10 +1521,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         justify-content: center;
     }
 
-    .swiper {
-        height: 320px;
-    }
-
     .reviews__card {
         margin-left: auto;
         margin-right: auto;
@@ -1511,6 +1531,32 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         font-size: 16px;
     }
 
+    .reviews__block {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .reviews__title {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .reviews__left {
+        margin-bottom: 0;
+    }
+
+    .reviews__block {
+        position: relative;
+        background-color: rgba(255, 255, 255, .55);
+    }
+
+    .reviews__img {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1680,16 +1726,17 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         max-width: 250px;
     }
 
-    .swiper {
-        height: 300px;
-    }
-
     .reviews__card {
         height: 180px;
     }
 
     .reviews__card-text {
         font-size: 15px;
+    }
+
+    .reviews__left {
+        gap: 10px;
+        font-size: 13px;
     }
 }
 
@@ -1750,10 +1797,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     button.accordeon__item-title {
         padding: 15px;
-    }
-
-    .swiper {
-        height: 330px;
     }
 
     .reviews__card {
