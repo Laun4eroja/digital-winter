@@ -390,7 +390,7 @@ main .popup {
     position: absolute;
     top: -10px;
     color: var(--company-color);
-    opacity: .4;
+    opacity: .3;
     user-select: none;
     animation: snowfall linear infinite;
     will-change: transform;
