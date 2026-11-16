@@ -1375,7 +1375,8 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 @media (max-width: 720px) {
 
     .header__subtitle,
-    .menu {
+    .menu,
+    .header__title {
         color: #fff;
     }
 
