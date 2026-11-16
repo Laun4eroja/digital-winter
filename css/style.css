@@ -224,7 +224,7 @@ main .popup {
 }
 
 .form__button {
-    background-color: rgba(128, 0, 32, 0.85);
+    background-color: var(--main);
     backdrop-filter: blur(4px);
     border-radius: 50px;
     font-size: clamp(14px, 1vw, 16px);
