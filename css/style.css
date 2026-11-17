@@ -20,7 +20,6 @@ html {
     /* Новогодняя палитра */
     --main: #324782;
     --text: #2A2521;
-    --accent: #D4AF37;
     --company-color: #00A6EB;
 }
 
@@ -193,10 +192,6 @@ main {
     transition: all .2s ease-in;
     font-size: clamp(14px, 1vw, 18px);
 
-}
-
-.menu__item:hover {
-    color: var(--accent);
 }
 
 .snow {
