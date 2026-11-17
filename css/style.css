@@ -176,7 +176,7 @@ main {
     z-index: 10;
     bottom: 0;
     left: 0;
-    transform: translateY(50%);
+    transform: translateY(35%);
 }
 
 .header__sheet-2 {
