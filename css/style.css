@@ -1318,6 +1318,8 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .reviews__block {
         padding-left: 20px;
+        padding-top: 20px;
+        align-items: end;
     }
 
     .reviews__card-text {
@@ -1326,7 +1328,8 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .reviews__left {
         gap: 15px;
-        font-size: 14px;
+        font-size: 15px;
+        margin-bottom: 20px;
     }
 
     .reviews__img {
@@ -1547,7 +1550,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .reviews__block {
         position: relative;
-        background-color: rgba(255, 255, 255, .5);
+        background-color: rgba(255, 255, 255, .7);
     }
 
     .reviews__img {
@@ -1719,7 +1722,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
     }
 
     .popup__title {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .header__logo {
@@ -1736,7 +1739,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .reviews__left {
         gap: 10px;
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
