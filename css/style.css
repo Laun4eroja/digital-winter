@@ -1043,6 +1043,10 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
 @media (max-width: 1000px) {
 
+    main {
+        padding-top: 0;
+    }
+    
     .section {
         padding: 100px 0;
     }
