@@ -68,36 +68,6 @@ for (let item of headerTab) {
 
 // ------------------------ //
 
-// popup -->
-
-const openBtn = document.getElementById('openBtn');
-const popup = document.getElementById('myPopup');
-const closeBtn = document.getElementById('closeBtn');
-
-// Открыть по клику на кнопку
-openBtn.addEventListener('click', () => {
-    popup.classList.add('active');
-    document.body.classList.add('overflow');
-});
-
-// Закрыть по клику на крестик/кнопку закрытия
-closeBtn.addEventListener('click', () => {
-    popup.classList.remove('active');
-    document.body.classList.remove('overflow');
-});
-
-// Закрыть при клике на темный фон вокруг окна
-popup.addEventListener('click', (event) => {
-    if (event.target === popup) {
-        popup.classList.remove('active');
-        document.body.classList.remove('overflow');
-    }
-});
-
-// <-- popup
-
-// ------------------------ //
-
 // accordeon -->
 
 const accordeon = document.querySelectorAll('.accordeon');
@@ -121,39 +91,9 @@ accordeonTitles.forEach.call(accordeonTitles, function (accordeonTitle) {
 
 // <-- accordeon
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-        delay: 7000,
-        disableOnInteraction: false,
-    },
+// ------------------------ //
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-
-    breakpoints: {
-        240: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        720: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1033: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        }
-    }
-});
-
-// снег -->
+// snow -->
 
 const flakes = document.querySelectorAll('.snow__flake');
 
@@ -169,6 +109,6 @@ flakes.forEach((flake, index) => {
   flake.style.animationDelay = `${delay}s`;
 });
 
-// <-- снег
+// <-- snow
 
 
