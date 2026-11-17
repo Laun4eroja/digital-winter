@@ -64,11 +64,6 @@ main {
     padding-top: 50px;
 }
 
-/* popup stays light for readability */
-main .popup {
-    color: var(--text);
-}
-
 .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -98,177 +93,6 @@ main .popup {
 .overflow {
     overflow: hidden;
 }
-
-/* Стили для фона затемнения */
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.popup__title {
-    font-size: 30px;
-}
-
-.popup__top-close {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.popup__top-close img {
-    width: 100%;
-    height: 100%;
-}
-
-/* Стили для содержимого popup */
-
-.popup-content {
-    background: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    max-width: 500px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Класс для отображения popup (добавляется через JS) */
-
-.popup.active {
-    display: flex;
-}
-
-.form {
-    display: grid;
-    gap: 20px;
-}
-
-.form__text {
-    font-size: 12px;
-}
-
-.form__group {
-    color: var(--text);
-}
-
-.label {
-    display: block;
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.input {
-    color: var(--text);
-    width: 100%;
-    display: block;
-    padding: 5px 0 8px;
-    border-bottom: 1px solid rgba(128, 0, 32, 0.35);
-    outline: none;
-}
-
-.input::placeholder {
-    color: rgba(42, 37, 33, 0.55);
-    font-weight: 200;
-    line-height: 1.1;
-    font-size: 16px;
-}
-
-.textarea {
-    resize: vertical;
-    width: 100%;
-    display: block;
-    height: 100px;
-    padding: 10px 0 8px;
-    border-bottom: 1px solid rgba(128, 0, 32, 0.35);
-    line-height: 1.5;
-    color: var(--text);
-}
-
-.textarea::placeholder {
-    color: rgba(42, 37, 33, 0.55);
-    font-weight: 200;
-    line-height: 1.1;
-    font-size: 16px;
-}
-
-.textarea:focus {
-    outline: none;
-}
-
-.form__agreement {
-    line-height: 1.4;
-    font-size: 14px;
-}
-
-.real-checkbox {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-.form__button {
-    background-color: var(--main);
-    backdrop-filter: blur(4px);
-    border-radius: 50px;
-    font-size: clamp(14px, 1vw, 16px);
-    font-weight: 600;
-    color: #fff;
-    padding: 15px 55px;
-    display: inline-block;
-}
-
-.custom-checkbox {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border: 2px solid var(--text);
-    border-radius: 4px;
-    vertical-align: sub;
-    margin-right: 5px;
-    line-height: 1.4;
-}
-
-.custom-checkbox::before {
-    content: '';
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background-image: url('./../images/reviews/check-mark.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    margin-top: 1px;
-
-    transition: .2s ease-in;
-}
-
-.real-checkbox:checked+.custom-checkbox::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
 
 .header {
     position: relative;
@@ -894,31 +718,6 @@ main .popup {
     width: 100%;
 }
 
-.reviews__cta-text {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--text);
-}
-
-.reviews__cta-btn {
-    display: inline-block;
-    border-radius: 50px;
-    transition: all .1s ease-in;
-    background-color: var(--main);
-    backdrop-filter: blur(4px);
-    /* font-size: 16px; */
-    font-size: clamp(14px, 1vw, 16px);
-    font-weight: 600;
-    color: #fff;
-    padding: 15px 55px;
-}
-
-.reviews__cta-btn:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
-}
-
 .reviews__card {
     height: 240px;
     backdrop-filter: blur(5px);
@@ -1507,10 +1306,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         text-align: start;
     }
 
-    .form {
-        text-align: start !important;
-    }
-
     .app__store_wrapper:hover span {
         color: var(--text);
     }
@@ -1574,14 +1369,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .reviews__cards {
         grid-template-columns: 1fr;
-    }
-
-    .reviews__cta-text {
-        font-size: 18px;
-    }
-
-    .form {
-        text-align: right;
     }
 
     .header__wrapper {
@@ -1713,18 +1500,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         margin-bottom: 10px;
     }
 
-    .form {
-        gap: 10px;
-    }
-
-    .popup-content {
-        max-width: 380px;
-    }
-
-    .popup__title {
-        font-size: 22px;
-    }
-
     .header__logo {
         max-width: 250px;
     }
@@ -1787,8 +1562,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         gap: 20px;
     }
 
-    .reviews__left,
-    .reviews__cta-text {
+    .reviews__left {
         gap: 20px;
     }
 
@@ -1819,14 +1593,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .reviews__cards {
         gap: 20px;
-    }
-
-    .popup-content {
-        max-width: 320px;
-    }
-
-    .popup-content {
-        padding: 20px;
     }
 
     .header__sheet-1 {
