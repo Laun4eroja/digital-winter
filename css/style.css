@@ -1142,6 +1142,16 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         padding: 60px 0;
     }
 
+    .header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(204, 178, 123, 0.2);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 1;
+    }
+    
     .header__subtitle,
     .menu,
     .header__title {
@@ -1204,16 +1214,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 }
 
 @media (max-width: 720px) {
-
-    .header::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-color: rgba(204, 178, 123, 0.2);
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(5px);
-        z-index: 1;
-    }
 
     .concierge__wrapper {
         flex-direction: column;
