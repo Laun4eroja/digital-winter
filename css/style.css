@@ -1020,6 +1020,10 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
     .app__btns {
         margin-top: 0;
     }
+
+    .categories__list-item {
+        min-height: 62px;
+    }
 }
 
 @media (max-width: 1033px) {
@@ -1143,6 +1147,12 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         padding: 60px 0;
     }
 
+    .header__subtitle,
+    .menu,
+    .header__title {
+        color: #fff;
+    }
+
     .categories__top {
         flex-direction: column;
         align-items: start;
@@ -1199,12 +1209,6 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 }
 
 @media (max-width: 720px) {
-
-    .header__subtitle,
-    .menu,
-    .header__title {
-        color: #fff;
-    }
 
     .header::before {
         content: "";
@@ -1416,6 +1420,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
 
     .categories__list-item {
         max-width: 140px;
+        min-height: 50px;
         font-size: 12px;
         padding: 10px 4px;
     }
@@ -1516,6 +1521,7 @@ button.accordeon__item-title.accordeon__item-title--active .accordeon__icon path
         gap: 10px;
         font-size: 14px;
     }
+    
 }
 
 @media (max-width: 490px) {
